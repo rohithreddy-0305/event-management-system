@@ -1,4 +1,4 @@
- package com.example.eventmanagementsystem.service;
+package com.example.eventmanagementsystem.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

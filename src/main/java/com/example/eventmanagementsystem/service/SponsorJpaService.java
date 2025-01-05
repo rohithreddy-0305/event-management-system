@@ -38,7 +38,7 @@ public class SponsorJpaService implements SponsorRepository {
 				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, " some events are missing");
 			}
 			sponsor.setEvents(eventsDataList);
-			
+
 			return sponsorRepo.save(sponsor);
 		} catch (NoSuchElementException e) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "event doesn't exist");

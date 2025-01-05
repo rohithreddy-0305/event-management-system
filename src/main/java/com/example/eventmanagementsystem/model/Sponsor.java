@@ -17,7 +17,8 @@ public class Sponsor {
 	private String sponsorName;
 	@Column(name = "industry")
 	private String industry;
-	@ManyToMany(mappedBy = "sponsors")
+	@ManyToMany
+	@JoinTable(name = "event_sponsor", joinColumns = @JoinColumn(name = "sponsorid"), inverseJoinColumns = @JoinColumn(name = "eventid"))
 	@JsonIgnoreProperties("sponsors")
 	private List<Event> events;
 

@@ -17,8 +17,7 @@ public class Event {
 	private String eventName;
 	@Column(name = "date")
 	private String date;
-	@ManyToMany
-	@JoinTable(name = "event_sponsor", joinColumns = @JoinColumn(name = "eventid"), inverseJoinColumns = @JoinColumn(name = "sponsorid"))
+	@ManyToMany(mappedBy = "events")
 	@JsonIgnoreProperties("events")
 	private List<Sponsor> sponsors;
 
